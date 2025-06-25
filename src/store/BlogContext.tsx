@@ -96,7 +96,7 @@ export default function CreatePost() {
           ></textarea>
 
           <button type="submit" className="btn btn-outline-primary btn-sm">
-            Save Post
+            Save 
           </button>
         </form>
       </StyledCard>
