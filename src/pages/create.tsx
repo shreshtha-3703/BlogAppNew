@@ -9,6 +9,7 @@ export default function CreatePost() {
   const [content, setContent] = useState('');
   const [posts, setPosts] = useState<any[]>([]);
   const [success, setSuccess] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   const router = useRouter();
 
@@ -17,12 +18,14 @@ useEffect(() => {
     if (savedPosts) {
       setPosts(JSON.parse(savedPosts));
     }
+    setLoaded(true); 
   }, []);
 
-
   useEffect(() => {
-    localStorage.setItem('posts', JSON.stringify(posts));
-  }, [posts]);
+    if (loaded) {
+      localStorage.setItem('posts', JSON.stringify(posts));
+    }
+  }, [posts, loaded]);
 
 
 const handleSubmit = () => {
@@ -34,7 +37,7 @@ const handleSubmit = () => {
     content,
   };
 
-    const updatedPosts = [newPost, ...posts];
+    const updatedPosts = [...posts,newPost];
     setPosts(updatedPosts);
     setSuccess(true);
 
@@ -56,7 +59,7 @@ const handleSubmit = () => {
             backgroundColor: '#fff',
             borderRadius: '8px',
           }}>
-  <form onSubmit={handleSubmit} className=" d-flex form-container">
+  <form onSubmit={handleSubmit} className="d-flex form-container">
     <input
       type="text"
       placeholder="Title"
