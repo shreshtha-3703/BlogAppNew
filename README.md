@@ -38,3 +38,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ My Blog App (Next.js + TypeScript + Bootstrap)
+
+This is a simple blog post application built with **Next.js**, **TypeScript**, **Bootstrap**, and **Formik**. Users can:
+
+- Create a new blog post
+- Search posts by title
+- View post details
+- Delete posts  
+- All posts are stored in localStorage
+
+Features
+
+-  Create blog posts with title, description, and content
+-  Live search functionality
+-  Delete posts
+-  View full post details
+-  Built using functional components and hooks (`useState`, `useEffect`)
+-  Responsive UI using Bootstrap
+-  LocalStorage for persistent storage
+
+Tech Stack
+
+- [Next.js]
+- [React]
+- [TypeScript]
+- [Bootstrap 5]
+- [Formik]
+
+
+
