@@ -35,7 +35,7 @@ const handleSubmit = () => {
   };
 
     const updatedPosts = [newPost, ...posts];
-    localStorage.setItem('posts', JSON.stringify(updatedPosts));
+    setPosts(updatedPosts);
     setSuccess(true);
 
     setTimeout(() => {
